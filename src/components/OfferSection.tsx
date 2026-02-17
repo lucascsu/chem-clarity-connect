@@ -51,7 +51,7 @@ const OfferSection = () => {
             </ul>
 
             <a
-              href="https://wa.me/5500000000000?text=Olá! Gostaria de agendar uma aula experimental de Química."
+              href="https://wa.me/5571920005184?text=Olá! Gostaria de agendar uma aula experimental de Química."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold text-lg hover:opacity-90 transition-all glow-purple"
