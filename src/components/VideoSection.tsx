@@ -38,7 +38,7 @@ const VideoSection = () => {
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-row flex-wrap justify-center items-start gap-6">
           {videos.map((video, index) => (
             <motion.div
               key={video.id}
@@ -47,7 +47,7 @@ const VideoSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`rounded-xl overflow-hidden border border-border bg-card shadow-lg ${
-                video.short ? "w-full max-w-[320px]" : "w-full max-w-[560px]"
+                video.short ? "w-[240px]" : "w-[420px]"
               }`}
             >
               <div
