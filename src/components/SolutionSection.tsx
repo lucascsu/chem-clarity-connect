@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle2, BookOpen, Target, Users } from "lucide-react";
+import { CheckCircle2, BookOpen, Target, Users, MessageCircle } from "lucide-react";
 
 const solutions = [
   {
@@ -62,6 +62,24 @@ const SolutionSection = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="flex justify-center mt-12"
+        >
+          <a
+            href="https://wa.me/5571920005184?text=Olá! Gostaria de agendar uma aula experimental de Química."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold text-lg hover:opacity-90 transition-all glow-purple"
+          >
+            <MessageCircle className="w-5 h-5" />
+            Agendar Aula Experimental
+          </a>
+        </motion.div>
       </div>
     </section>
   );
