@@ -5,6 +5,12 @@ const videos = [
   {
     id: "PO2q1j_KPLw",
     title: "Aula de Química",
+    short: false,
+  },
+  {
+    id: "lmm-0Je_x-A",
+    title: "Short de Química",
+    short: true,
   },
 ];
 
@@ -32,7 +38,7 @@ const VideoSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+        <div className="flex flex-wrap justify-center gap-6">
           {videos.map((video, index) => (
             <motion.div
               key={video.id}
@@ -40,9 +46,14 @@ const VideoSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="w-full max-w-lg rounded-xl overflow-hidden border border-border bg-card shadow-lg"
+              className={`rounded-xl overflow-hidden border border-border bg-card shadow-lg ${
+                video.short ? "w-full max-w-[320px]" : "w-full max-w-[560px]"
+              }`}
             >
-              <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+              <div
+                className="relative w-full"
+                style={{ paddingBottom: video.short ? "177.78%" : "56.25%" }}
+              >
                 <iframe
                   className="absolute inset-0 w-full h-full"
                   src={`https://www.youtube.com/embed/${video.id}`}
